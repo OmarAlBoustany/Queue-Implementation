@@ -1,0 +1,24 @@
+#ifndef HEADER_H
+#define HEADER_H
+#include <iostream>
+using namespace std;
+
+template < class T>
+class Queue {
+private:
+	int Size;
+	int head;
+	int tail;
+	T* queuePtr;
+
+public:
+	Queue(int);
+	~Queue(){ delete[] queuePtr; }
+	bool enqueue(const T&);
+	bool dequeue(T&);
+	T peek();
+	bool isEmpty()const;
+	bool isFull()const;
+};
+
+#endif
