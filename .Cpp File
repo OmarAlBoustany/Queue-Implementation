@@ -18,12 +18,19 @@ T Queue<T>::peek(){
 
 template <class T>
 bool Queue<T> ::isEmpty()const {
-	return head == -1;
+	if (head == -1)
+        return true;
+    else
+        return false;
 }
 
 template <class T>
 bool Queue<T> ::isFull()const {
-	return tail == (Size - 1) && head == 0;
+	if (tail == Size - 1 && head == 0)
+	{
+        return true;
+    }
+    return false;
 }
 
 template <class T>
